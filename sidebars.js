@@ -19,6 +19,9 @@ const sidebars = {
     {
       type: 'category',
       label: '前言',
+      link: {
+        type: 'generated-index',
+      },
       items: [
         'product/introduction',
         'product/core'
@@ -27,6 +30,9 @@ const sidebars = {
     {
       type: 'category',
       label: '安装部署',
+      link: {
+        type: 'generated-index',
+      },
       items: [
         'install/optimize',
         'install/Linux',
@@ -42,6 +48,9 @@ const sidebars = {
     {
       type: 'category',
       label: '配置指南',
+      link: {
+        type: 'generated-index',
+      },
       items: [
         'config/read',
         'config/mqtt',
@@ -59,6 +68,9 @@ const sidebars = {
     {
       type: 'category',
       label: '功能',
+      link: {
+        type: 'generated-index',
+      },
       items: [
         'function/dashboard',
         'function/ps',
@@ -68,6 +80,9 @@ const sidebars = {
         {
           type: 'category',
           label: '认证鉴权',
+          link: {
+            type: 'generated-index',
+          },
           items: [
             'auth/before',
             'auth/db',
@@ -79,6 +94,9 @@ const sidebars = {
         {
           type: 'category',
           label: 'acl功能',
+          link: {
+            type: 'generated-index',
+          },
           items: [
             'acl/before',
             'acl/sql',
@@ -91,6 +109,9 @@ const sidebars = {
         {
           type: 'category',
           label: '指令消费',
+          link: {
+            type: 'generated-index',
+          },
           items: [
             'command/KAFKA',
             'command/ROCKETMQ',
@@ -106,10 +127,16 @@ const sidebars = {
     {
       type: 'category',
       label: '规则引擎',
+      link: {
+        type: 'generated-index',
+      },
       items: [
         {
           type: 'category',
           label: '事件类型',
+          link: {
+            type: 'generated-index',
+          },
           items: [
             'gzyq/event/read',
             'gzyq/event/connect',
@@ -127,6 +154,9 @@ const sidebars = {
         {
           type: 'category',
           label: '规则配置',
+          link: {
+            type: 'generated-index',
+          },
           items: [
             'gzyq/rule/INTRODUCE',
             'gzyq/rule/STARTED',
@@ -137,6 +167,9 @@ const sidebars = {
         {
           type: 'category',
           label: '动作类型',
+          link: {
+            type: 'generated-index',
+          },
           items: [
             'gzyq/action/SAVE_KAFKA',
             'gzyq/action/SAVE_MYSQL',
@@ -155,6 +188,9 @@ const sidebars = {
         {
           type: 'category',
           label: '数据源配置',
+          link: {
+            type: 'generated-index',
+          },
           items: [
             'gzyq/source/BEFORE',
             'gzyq/source/MYSQL',
@@ -177,6 +213,9 @@ const sidebars = {
     {
       type: 'category',
       label: '多协议',
+      link: {
+        type: 'generated-index',
+      },
       items: [
         'protocol/coap',
         'protocol/32960',
@@ -189,6 +228,9 @@ const sidebars = {
     {
       type: 'category',
       label: '工具',
+      link: {
+        type: 'generated-index',
+      },
       items: [
         'tools/ssl',
         'tools/haproxy',
@@ -197,6 +239,9 @@ const sidebars = {
     {
       type: 'category',
       label: 'API',
+      link: {
+        type: 'generated-index',
+      },
       items: [
         'api/Publish',
         'api/Check',
@@ -206,6 +251,9 @@ const sidebars = {
     {
       type: 'category',
       label: '性能压测',
+      link: {
+        type: 'generated-index',
+      },
       items: [
         'test/Conn',
         'test/Broad',
@@ -220,6 +268,9 @@ const sidebars = {
     {
       type: 'category',
       label: '可观测',
+      link: {
+        type: 'generated-index',
+      },
       items: [
         'view/api',
         'view/metrics',

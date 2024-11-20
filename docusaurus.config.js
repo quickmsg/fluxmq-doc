@@ -66,7 +66,7 @@ const config = {
       },
       footer: {
         style: 'dark',
-        copyright: `Copyright © ${new Date().getFullYear()} 非讯科技`,
+        copyright: `Copyright © ${new Date().getFullYear()} 非迅科技`,
       },
       prism: {
         theme: prismThemes.github,

@@ -3,6 +3,9 @@
     {
       "type": "category",
       "label": "前言",
+      "link": {
+        "type": "generated-index"
+      },
       "items": [
         "product/introduction",
         "product/core"
@@ -11,6 +14,9 @@
     {
       "type": "category",
       "label": "安装部署",
+      "link": {
+        "type": "generated-index"
+      },
       "items": [
         "install/optimize",
         "install/Linux",
@@ -24,6 +30,9 @@
     {
       "type": "category",
       "label": "配置指南",
+      "link": {
+        "type": "generated-index"
+      },
       "items": [
         "config/read",
         "config/mqtt",
@@ -41,6 +50,9 @@
     {
       "type": "category",
       "label": "功能",
+      "link": {
+        "type": "generated-index"
+      },
       "items": [
         "function/dashboard",
         "function/ps",
@@ -50,6 +62,9 @@
         {
           "type": "category",
           "label": "认证鉴权",
+          "link": {
+            "type": "generated-index"
+          },
           "items": [
             "auth/before",
             "auth/db",
@@ -61,6 +76,9 @@
         {
           "type": "category",
           "label": "acl功能",
+          "link": {
+            "type": "generated-index"
+          },
           "items": [
             "acl/before",
             "acl/sql",
@@ -72,6 +90,9 @@
         {
           "type": "category",
           "label": "指令消费",
+          "link": {
+            "type": "generated-index"
+          },
           "items": [
             "command/KAFKA",
             "command/ROCKETMQ",
@@ -87,10 +108,16 @@
     {
       "type": "category",
       "label": "规则引擎",
+      "link": {
+        "type": "generated-index"
+      },
       "items": [
         {
           "type": "category",
           "label": "事件类型",
+          "link": {
+            "type": "generated-index"
+          },
           "items": [
             "gzyq/event/read",
             "gzyq/event/connect",
@@ -106,6 +133,9 @@
         {
           "type": "category",
           "label": "规则配置",
+          "link": {
+            "type": "generated-index"
+          },
           "items": [
             "gzyq/rule/INTRODUCE",
             "gzyq/rule/STARTED",
@@ -116,6 +146,9 @@
         {
           "type": "category",
           "label": "动作类型",
+          "link": {
+            "type": "generated-index"
+          },
           "items": [
             "gzyq/action/SAVE_KAFKA",
             "gzyq/action/SAVE_MYSQL",
@@ -123,6 +156,9 @@
             {
               "type": "category",
               "label": "离线消息存储",
+              "link": {
+                "type": "generated-index"
+              },
               "items": [
                 "gzyq/action/OFFLINE",
                 "gzyq/action/OFFLINE_REDIS",
@@ -134,6 +170,9 @@
         {
           "type": "category",
           "label": "数据源配置",
+          "link": {
+            "type": "generated-index"
+          },
           "items": [
             "gzyq/source/BEFORE",
             "gzyq/source/MYSQL",
@@ -156,6 +195,9 @@
     {
       "type": "category",
       "label": "多协议",
+      "link": {
+        "type": "generated-index"
+      },
       "items": [
         "protocol/coap",
         "protocol/32960",
@@ -168,6 +210,9 @@
     {
       "type": "category",
       "label": "工具",
+      "link": {
+        "type": "generated-index"
+      },
       "items": [
         "tools/ssl",
         "tools/haproxy"
@@ -176,6 +221,9 @@
     {
       "type": "category",
       "label": "API",
+      "link": {
+        "type": "generated-index"
+      },
       "items": [
         "api/Publish",
         "api/Check",
@@ -185,6 +233,9 @@
     {
       "type": "category",
       "label": "性能压测",
+      "link": {
+        "type": "generated-index"
+      },
       "items": [
         "test/Conn",
         "test/Broad",
@@ -199,6 +250,9 @@
     {
       "type": "category",
       "label": "可观测",
+      "link": {
+        "type": "generated-index"
+      },
       "items": [
         "view/api",
         "view/metrics"
