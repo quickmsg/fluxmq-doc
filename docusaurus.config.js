@@ -44,6 +44,7 @@ const config = {
         docs: {
           sidebarPath: './sidebars.js',
           routeBasePath: '/',
+          includeCurrentVersion: false,
         },
         blog: false,
         theme: {
@@ -59,6 +60,10 @@ const config = {
       navbar: {
         title: 'FluxMQ文档',
         items: [
+          {
+            type: 'docsVersionDropdown',
+            position: 'right',
+          },
         ],
       },
       footer: {

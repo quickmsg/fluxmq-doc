@@ -32,6 +32,8 @@ const sidebars = {
         'install/Linux',
         'install/Windows',
         'install/MacOS',
+        'install/Linux-aarch64',
+        'install/MacOS-aarch64',
         'install/docker',
         'install/docker-compose',
         'install/kubernetes'
@@ -81,6 +83,7 @@ const sidebars = {
             'acl/before',
             'acl/sql',
             'acl/config',
+            'acl/http',
           ]
         },
         'function/link',
@@ -117,6 +120,8 @@ const sidebars = {
             'gzyq/event/ack',
             'gzyq/event/ping',
             'gzyq/event/offline',
+            'gzyq/event/drop',
+            'gzyq/event/delivered',
           ]
         },
         {
