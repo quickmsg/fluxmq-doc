@@ -56,7 +56,12 @@ const config = {
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
       navbar: {
-        title: 'FluxMQ文档',
+        logo: {
+          src: 'logo_light.jpg',
+          srcDark: 'logo_dark.jpg',
+          width: 32,
+          height: 32,
+        },
         items: [
           {
             type: 'docsVersionDropdown',
@@ -90,6 +95,8 @@ const config = {
       }),
     ],
   ],
+
+  favicon: 'logo_light.jpg',
 };
 
 export default config;
