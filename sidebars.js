@@ -177,6 +177,9 @@ const sidebars = {
             {
               type: 'category',
               label: '离线消息存储',
+              link: {
+                type: 'generated-index',
+              },
               items: [
                 'gzyq/action/OFFLINE',
                 'gzyq/action/OFFLINE_REDIS',

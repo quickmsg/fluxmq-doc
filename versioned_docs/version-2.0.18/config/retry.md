@@ -1,4 +1,7 @@
 # 重试配置
+
+FluxMQ重试参数的配置。
+
 ```yaml
 retry:
   retrySize : 10

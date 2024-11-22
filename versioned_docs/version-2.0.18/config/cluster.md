@@ -1,5 +1,6 @@
 # 集群配置
 
+FluxMQ的集群模式支持节点动态扩容。
 ```yaml
 cluster: # 集群配置
   localAddress: "127.0.0.1"

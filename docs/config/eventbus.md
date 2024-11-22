@@ -1,4 +1,7 @@
 # EVENTBUS配置
+
+该配置主要影响集群内部节点间的同步消息性能。
+
 ```yaml
 eventbus:
   compressed: true # 是否压缩

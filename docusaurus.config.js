@@ -43,6 +43,7 @@ const config = {
           sidebarPath: './sidebars.js',
           routeBasePath: '/',
           includeCurrentVersion: false,
+          // includeCurrentVersion: true,
         },
         blog: false,
         theme: {

@@ -1,4 +1,6 @@
 # 共享订阅配置
+
+共享订阅的策略与最大订阅数量的配置。
 ```yaml
 shareSubscribe:
   strategy: RANDOM 

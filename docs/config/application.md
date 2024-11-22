@@ -1,4 +1,7 @@
 # 应用配置
+
+应用相关配置选项，通常用户不会对此进行修改。
+
 ```yaml
 application:
   name: fluxmq

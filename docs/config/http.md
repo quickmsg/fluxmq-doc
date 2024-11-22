@@ -1,5 +1,6 @@
 # HTTP配置
 
+该配置影响用户对dashboard的访问。
 ```YAML
 http: # http相关配置 端口固定60000
   port: 60000
