@@ -60,8 +60,8 @@ const config = {
         logo: {
           src: 'logo_light.jpg',
           srcDark: 'logo_dark.jpg',
-          width: 40,
-          height: 40,
+          width: 34,
+          height: 32,
         },
         items: [
           {
