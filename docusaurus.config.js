@@ -72,7 +72,7 @@ const config = {
       },
       footer: {
         style: 'dark',
-        copyright: `Copyright © ${new Date().getFullYear()} 非迅科技`,
+        copyright: `Copyright © 2021-${new Date().getFullYear()} 非讯科技 版权所有 | 苏ICP备2023015068号-1`,
       },
       prism: {
         theme: prismThemes.github,
