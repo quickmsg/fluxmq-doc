@@ -2,38 +2,48 @@
 FluxMQ为了增强功能，提供了函数功能，可以通过函数来实现一些字符串处理,可以通过函数来转换想要的数据格式，注意基本类型转换，传入的字符串参数必须合法，并且在范围内
 
 ## 函数列表
-| **函数名**                     | **说明**                                                                         |
-|-----------------------------|--------------------------------------------------------------------------------|
-| str(src)                    | - 使用在SQL语句中，可以将字节构转换成字符串<br />- 使用在支持模板替换的想象中，比如数据库保存的SQL，KAFKA的TOPIC等地方       |
-| json(src)                   | - 使用在SQL语句中，可以将嵌套的Json结构转换成字符串<br />- 使用在支持模板替换的想象中，比如数据库保存的SQL，KAFKA的TOPIC等地方 |
-| bytes(src)                  | 将对象转成字节数组，会先将对象JSON化，再转成UTF8格式的字节数组                                            |
-| int8(src)                   | 将对象转为Int8类型，相当于byte                                                            |
-| int16(src)                  | 将对象转为Int16类型，相当于short                                                          |
-| int32(src)                  | 将对象转为Int32类型，相当于int                                                            |
-| int64(src)                  | 将对象转为Int64类型，相当于long                                                           |
-| toDouble(src)               | 将对象转为double类型                                                                  |
-| hexStr(src)                 | 将对象转成HEX字符串， 会先将对象JSON化，再转成对象的16进制字符串                                          |
-| date(src)                   | 格式化时间字符串：yyyy-MM-dd                                                            |
-| datetime(src)               | 格式化时间字符串：yyyy-MM-dd HH:mm:ss                                                   |
-| dateToTimestamp(src)        | yyyy-MM-dd 时间字符串转成时间戳                                                          |
-| datetimeToTimestamp(src)    | yyyy-MM-dd HH:mm:ss 时间字符串转成时间戳                                                 |
-| uuid()                      | 生成32位随机小写字符串                                                                   |
-| uuidUpper()                 | 生成32位随机大写字符串                                                                   |
-| isBytes(src)                | 判断是否是字节数组                                                                      |
-| isJson(src)                 | 判断是否是json                                                                      |
-| find(src,"字符串")             | 从头查找第一个包含子串的                                                                   |
-| find(src,"字符串","leading")   | 从头查找第一个包含子串的                                                                   |
-| find(src,"字符串","trailing")  | 从尾查找第一个包含子串的                                                                   |
-| split(src,"字符串")            | 根据字符串切割原字符串                                                                    |
-| split(src,"字符串","leading")  | 从头切割只切割第一个字符                                                                   |
-| split(src,"字符串","trailing") | 从尾切割只切割第一个字符                                                                   |
-| last(src)                   | 获取最后一个数组元素                                                                     |
-| nth(index,src)              | 获取数组的指定索引                                                                      |
-| base64_encode(src)          | 获取base64加密字符串                                                                  |
-| md5(src)                    | 获取md5加密字符串                                                                     |
-| sha1(src)                   | 获取sha1加密字符串                                                                    |
-| sha256(src)                 | 获取sha256加密字符串                                                                  |
-| sha512(src)                 | 获取sha512加密字符串                                                                  |
+| **函数名**                            | **说明**                                                                   |
+|------------------------------------|--------------------------------------------------------------------------|
+| str(src)                           | 使用在SQL语句中，可以将字节构转换成字符串<br /> 使用在支持模板替换的想象中，比如数据库保存的SQL，KAFKA的TOPIC等地方    |
+| substring(src,beginIndex)          | 截取字符串从角标beginIndex开始到最后                                                  |
+| substring(src,beginIndex,endIndex) | 截取字符串从角标beginIndex开始到endIndex                                            |
+| match(src,REGEX)                   | 支持字符串匹配正则                                                                |
+| startsWith(src，indexStr)           | 是否以indexStr开头                                                            |
+| endsWith(src,indexStr)             | 是否以indexStr结尾                                                            |
+| indexOf(src,indexStr)              | 查找indexStr的角标                                                            |
+| replaceAll(src,str,indexStr)       | src里的str字符串替换成indexStr                                                   |
+| replace(src,char,indexChar)        | src里的char字符替换成indexChar                                                      |
+| json(src)                          | 使用在SQL语句中，可以将嵌套的Json结构转换成字符串<br /> 使用在支持模板替换的想象中，比如数据库保存的SQL，KAFKA的TOPIC等地方 |
+| bytes(src)                         | 将对象转成字节数组，会先将对象JSON化，再转成UTF8格式的字节数组                                      |
+| int8(src)                          | 将对象转为Int8类型，相当于byte                                                      |
+| int16(src)                         | 将对象转为Int16类型，相当于short                                                    |
+| int32(src)                         | 将对象转为Int32类型，相当于int                                                      |
+| int64(src)                         | 将对象转为Int64类型，相当于long                                                     |
+| toDouble(src)                      | 将对象转为double类型                                                            |
+| hexStr(src)                        | 将对象转成HEX字符串， 会先将对象JSON化，再转成对象的16进制字符串                                    |
+| date(src)                          | 格式化时间字符串：yyyy-MM-dd                                                      |
+| datetime(src)                      | 格式化时间字符串：yyyy-MM-dd HH:mm:ss                                             |
+| dateToTimestamp(src)               | yyyy-MM-dd 时间字符串转成时间戳                                                    |
+| datetimeToTimestamp(src)           | yyyy-MM-dd HH:mm:ss 时间字符串转成时间戳                                           |
+| uuid()                             | 生成32位随机小写字符串                                                             |
+| uuidUpper()                        | 生成32位随机大写字符串                                                             |
+| isBytes(src)                       | 判断是否是字节数组                                                                |
+| isJson(src)                        | 判断是否是json                                                                |
+| find(src,"字符串")                    | 从头查找第一个包含子串的                                                             |
+| find(src,"字符串","leading")          | 从头查找第一个包含子串的                                                             |
+| find(src,"字符串","trailing")         | 从尾查找第一个包含子串的                                                             |
+| split(src,"字符串")                   | 根据字符串切割原字符串                                                              |
+| split(src,"字符串","leading")         | 从头切割只切割第一个字符                                                             |
+| split(src,"字符串","trailing")        | 从尾切割只切割第一个字符                                                             |
+| last(src)                          | 获取最后一个数组元素                                                               |
+| nth(index,src)                     | 获取数组第index个元素                                                            |
+| mapGet(key,map)                    | 获取map中指定key，不存在返回null                                                    |
+| mapGet(key,map,default)            | 获取map中指定key，不存在时返回默认值                                                    |
+| base64_encode(src)                 | 获取base64加密字符串                                                            |
+| md5(src)                           | 获取md5加密字符串                                                               |
+| sha1(src)                          | 获取sha1加密字符串                                                              |
+| sha256(src)                        | 获取sha256加密字符串                                                            |
+| sha512(src)                        | 获取sha512加密字符串                                                            |
 
 ```java
 json({"x":"1"}) = "{\"x\":\"1\"}"
@@ -53,6 +63,9 @@ uuidUpper() = "09D27DE32DBF4AA19FD46339A31E184B"
 split('a/b/ c', '/') = ['a', 'b', ' c']
 split('a/b/ c', '/', 'leading') = ['a', 'b/ c']
 split('a/b/ c', '/', 'trailing') = ['a/b', ' c']
+nth(1, ['123','345']) = '123'
+mapGet('x',"{'x':'1'}") = "1"
+mapGet('y',"{'x':'1'}",3) = "3"     
 find('eeabcabcee', 'abc') = 'abcabcee'
 find('eeabcabcee', 'abc', 'leading') = 'abcabcee'
 find('eeabcabcee', 'abc', 'trailing') = 'abcee' 
