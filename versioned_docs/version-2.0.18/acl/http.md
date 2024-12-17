@@ -1,8 +1,8 @@
 # http配置
 
-![img.png](@site/static/images/acl/http.png)
+通过HTTP配置方式去加载ACL规则，FluxMQ会定时去刷新ACL缓存，实现ACL缓存的热更新。
 
-通过HTTP配置方式去加载ACL规则，当外部数据库ACL规则发生变化后，FluxMQ会定时去刷新ACL缓存，实现ACL缓存的热更新。
+![img.png](@site/static/images/acl/http.png)
 
 ## ACL拦截规则
 
