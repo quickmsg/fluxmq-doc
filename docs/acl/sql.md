@@ -1,8 +1,8 @@
 # sql配置
 
-![img.png](@site/static/images/acl/sql.png)
-
 通过SQL配置方式去加载ACL规则，当外部数据库ACL规则发生变化后，FluxMQ会定时去刷新ACL缓存，实现ACL缓存的热更新。
+
+![img.png](@site/static/images/acl/sql.png)
 
 ## ACL拦截规则
 ![acl.png](@site/static/images/acl/acl.png)

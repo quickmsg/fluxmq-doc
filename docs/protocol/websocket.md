@@ -1,4 +1,7 @@
 # WEBSOCKET
+
+WebSocket 协议是一种基于 TCP 协议的通信协议，它可以在客户端和服务器之间建立双向通信的连接，实现实时数据传输和交互操作。在Web应用程序中，WebSocket 协议可以替代 HTTP 协议的长轮询和短轮询技术，提供更高效和快速的通信方式。
+
 ## 启动插件
 ![img.png](@site/static/images/protocol/websocket/img.png)
 ### 设置端口
