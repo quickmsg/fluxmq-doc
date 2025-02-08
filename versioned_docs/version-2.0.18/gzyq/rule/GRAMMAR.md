@@ -36,16 +36,16 @@ SELECT clientId as cid FROM "$EVENT.PUBLISH" WHERE xyz = 'abc'
 ```
 
 ### 比较符号
-| 函数名 | 函数作用                                           | 返回值         |
-|-----|------------------------------------------------|-------------|
-| >   | 大于                                             | true/false  |
-| \<   | 小于                                             | true/false  |
-| \<=  | 小于等于                                           | true/false  |
-| >=  | 大于等于                                           | true/false  |
-| \<\>  | 不等于                                            | true/false  |
-| !=  | 不等于                                            | true/false  |
-| =   | 比较两者是否完全相等。可用于比较变量和主题                          | true/false  |
-| =~  | 比较主题(topic)是否能够匹配到主题过滤器(topic filter)。只能用于主题匹配 | true/false  |
+| 函数名         | 函数作用                                           | 返回值         |
+|-------------|------------------------------------------------|-------------|
+| >           | 大于                                             | true/false  |
+| \<          | 小于                                             | true/false  |
+| \<=         | 小于等于                                           | true/false  |
+| >=          | 大于等于                                           | true/false  |
+| \<\>        | 不等于                                            | true/false  |
+| !=          | 不等于                                            | true/false  |
+| =           | 比较两者是否完全相等。可用于比较变量和主题                          | true/false  |
+| =~          | 比较主题(topic)是否能够匹配到主题过滤器(topic filter)。只能用于主题匹配 | true/false  |
 
 
 ## SQL 语句示例
@@ -92,9 +92,9 @@ SELECT payload FROM "$EVENT.PUBLISH" WHERE payload.x.y = 1
 SELECT clientIp FROM "$EVENT.CONNECT" WHERE clientId = 'c1'
 ```
 
-- 筛选所有订阅 't/#' 主题 **且** 订阅级别为 QoS 1 的 clientId:
+- 筛选所有订阅 't/t' 主题 **且** 订阅级别为 QoS 1 的 clientId:
 ```plsql
-SELECT clientId FROM "$EVENT.SUBSCRIBE" WHERE topic =~ 't/#' and qos = 1
+SELECT clientId FROM "$EVENT.SUBSCRIBE" WHERE topic = 't/t' and qos = 1
 ```
 
 - 筛选所有订阅主题能匹配到 't/#' 且订阅级别为 QoS 1 的 clientId。注意与上例不同的是，这里用的是主题匹配操作符 **'=~'**，所以会匹配订阅 't' 或 't/+/a' 的订阅事件:
@@ -114,7 +114,7 @@ SELECT *, "test" as event FROM "$EVENT.PUBLISH"
 
 - 可以直接使用Java的String API，如 **startsWith，endsWith**；获取以'test'开头的所有Publish消息：
 ```plsql
-select * from "$EVENT.PUBLISH" where topic.startsWith('test')
+select * from "$EVENT.PUBLISH"  where topic.startsWith('test')
 ```
 **提示**
 
