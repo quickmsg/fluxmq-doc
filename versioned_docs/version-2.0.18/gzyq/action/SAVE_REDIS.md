@@ -7,7 +7,7 @@
 fluxmq新增redis存储，只需要根据对应的[数据类型]数据格式，选择对应的占位符插入即可，
 
 ```SHELL
-set ${clientId} 1 && set ${clientId} ${timestamp}
+set `${clientId}` 1 && set `${clientId}` `${timestamp}`
 ```
 
 ### Redis指令
