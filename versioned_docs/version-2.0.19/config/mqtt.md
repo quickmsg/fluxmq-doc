@@ -1,26 +1,27 @@
 # MQTT配置
 > 支持配置多个端口
 
-| 参数名                    | 描述                                          | 默认值       |
-|------------------------|---------------------------------------------|-----------|
-| port                   | mqtt启动的监听端口                                 | 必填项       |
-| wiretap                | 打印二进制日志，生产环境禁止使用                            | 必填项       |
-| messageMaxSize         | 单个推送最大的负载字节数                                | 必填项       |
-| proxy                  | proxy_protocol协议解析                          | 默认不启用     |
-| options                | netty 的options配置                            | 不推荐配置     |
-| childOptions           | netty 的child channel options配置              | 不推荐配置     |
-| enableAuth             | 是否开启认证                                      | 默认开启      |
-| enableAcl              | 是否开启ACL                                     | 默认开启      |
-| enableBridge           | 是否开启数据桥接                                    | 默认开启      |
-| maxSendWindowSize      | 单个连接发送确认消息窗口（qos1+qos2）                     | 默认 100    |
-| maxReceiveWindowSize   | 单个连接接收确认窗口（qos2）                            | 默认 100    |
-| maxConnectionPerSecond | 连接速率                                        | 默认 1000/s |
-| sessionPersistence     | 开启session消息持久化，建议使用离线消息，                    | 默认不开启     |
-| maxSessionSize         | 前提开启sessionPersistence生效                    | 默认100     |
-| useWebsocket           | 开启mqtt over websocket                       | 默认不开启     |
-| path                   | 开启mqtt over websocket前提下，设置websocket连接的path | 默认 /mqtt  |
-| ssl                   | 证书配置                                        | 默认 空      |
-| aclRefreshPeriod                   | acl加载ttl时间                                  | 默认 60(秒)  |
+| 参数名                    | 描述                                          | 默认值                     |
+|------------------------|---------------------------------------------|-------------------------|
+| port                   | mqtt启动的监听端口                                 | 必填项                     |
+| wiretap                | 打印二进制日志，生产环境禁止使用                            | 默认: false               |
+| exclusivePool                | 使用独立线程池                                     | 默认: false               |
+| messageMaxSize         | 单个推送最大的负载字节数                                | 默认:  512 * 1024 = 512kb |
+| proxy                  | proxy_protocol协议解析                          | 默认不启用                   |
+| options                | netty 的options配置                            | 不推荐配置                   |
+| childOptions           | netty 的child channel options配置              | 不推荐配置                   |
+| enableAuth             | 是否开启认证                                      | 默认开启                    |
+| enableAcl              | 是否开启ACL                                     | 默认开启                    |
+| enableBridge           | 是否开启数据桥接                                    | 默认开启                    |
+| maxSendWindowSize      | 单个连接发送确认消息窗口（qos1+qos2）                     | 默认 100                  |
+| maxReceiveWindowSize   | 单个连接接收确认窗口（qos2）                            | 默认 100                  |
+| maxConnectionPerSecond | 连接速率                                        | 默认 1000/s               |
+| sessionPersistence     | 开启session消息持久化，建议使用离线消息，                    | 默认不开启                   |
+| maxSessionSize         | 前提开启sessionPersistence生效                    | 默认100                   |
+| useWebsocket           | 开启mqtt over websocket                       | 默认不开启                   |
+| path                   | 开启mqtt over websocket前提下，设置websocket连接的path | 默认 /mqtt                |
+| ssl                   | 证书配置                                        | 默认 空                    |
+| aclRefreshPeriod                   | acl加载ttl时间                                  | 默认 60(秒)                |
 
 ## MQTT配置
 
