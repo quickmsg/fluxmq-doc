@@ -153,7 +153,7 @@ spec:
       serviceAccountName: fluxmq
       containers:
       - name: fluxmq
-        image: fluxmq/enterprise:2.0.18
+        image: fluxmq/enterprise:2.0.19
         ports:
         - containerPort: 47100
         - containerPort: 47500

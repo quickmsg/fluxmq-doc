@@ -5,7 +5,7 @@
 version: '3'
 services:
   fluxmq:
-    image: fluxmq/enterprise:2.0.18  # 请替换为您的fluxmq镜像名称和标签
+    image: fluxmq/enterprise:2.0.19  # 请替换为您的fluxmq镜像名称和标签
     ports:
       - "8080:8080"
       - "1883:1883"

@@ -2,7 +2,7 @@
 
 ## 下载安装包
 ```shell
-wget https://fluxmq.obs.cn-east-3.myhuaweicloud.com/fluxmq-2.0.18-linux-aarch64.zip
+wget https://fluxmq.obs.cn-east-3.myhuaweicloud.com/fluxmq-2.0.19-linux-aarch64.zip
 ```
 ## License
 FluxMQ默认提供100连接的免费接入，安装包下载后自带免费License，如需更多接入数请联系我们获取商业License！

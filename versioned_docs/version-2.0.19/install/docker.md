@@ -2,13 +2,13 @@
 
 ## 镜像拉取
 ```shell
-docker pull fluxmq/enterprise:2.0.18
+docker pull fluxmq/enterprise:2.0.19
 ```
 
 ## 启动FluxMQ
 > 默认会启动MQTT、MQTT over Websocket、HTTP端口
 ```shell
-docker run -it -d  -v /app/logs:/app/logs  -p 8080:8080 -p 1883:1883 -p 8883:8883 fluxmq/enterprise:2.0.18
+docker run -it -d  -v /app/logs:/app/logs  -p 8080:8080 -p 1883:1883 -p 8883:8883 fluxmq/enterprise:2.0.19
 ```
 
 ### 覆盖FluxMQ默认配置
@@ -83,13 +83,13 @@ application:
 ```
 #### 启动FluxMQ
 ```shell
-docker run -it -d  -v /app/logs:/app/logs /app/config/config.yaml:/app/config/config.yaml  -p 8080:8080 -p 1883:1883 -p 8883:8883 fluxmq/enterprise:2.0.18
+docker run -it -d  -v /app/logs:/app/logs /app/config/config.yaml:/app/config/config.yaml  -p 8080:8080 -p 1883:1883 -p 8883:8883 fluxmq/enterprise:2.0.19
 ```
 ## License配置
 
 > 配置文件目录：/app/license.base64
 ```shell
-docker run -it -d  -v /app/license.base64:/app/license.base64  -v /app/logs:/app/logs /app/config/config.yaml:/app/config/config.yaml  -p 8080:8080 -p 1883:1883 -p 8883:8883 fluxmq/enterprise:2.0.18
+docker run -it -d  -v /app/license.base64:/app/license.base64  -v /app/logs:/app/logs /app/config/config.yaml:/app/config/config.yaml  -p 8080:8080 -p 1883:1883 -p 8883:8883 fluxmq/enterprise:2.0.19
 ```
 
 
