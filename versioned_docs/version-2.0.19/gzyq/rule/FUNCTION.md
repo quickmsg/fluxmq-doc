@@ -27,8 +27,8 @@ FluxMQ为了增强功能，提供了函数功能，可以通过函数来实现�
 | split(src,"字符串")                   | 根据字符串切割原字符串                                                                    |
 | split(src,"字符串","leading")         | 从头切割只切割第一个字符                                                                   |
 | split(src,"字符串","trailing")        | 从尾切割只切割第一个字符                                                                   |
-| substring(src,index)               | 从角标index开始截取字符串                                                                |
-| substring(src,startIndex,endIndex) | 从角标startIndex开始-角标endIndex结束开始截取                                               |
+| substring(src,index)               | 截取从角标index开始到最后的字符串                                                            |
+| substring(src,startIndex,endIndex) | 截取从角标startIndex开始到角标endIndex结束的字符串                                             |
 | last(src)                          | 获取最后一个数组元素                                                                     |
 | nth(index,src)                     | 获取数组的指定索引                                                                      |
 | base64_encode(src)                 | 获取base64加密字符串                                                                  |
