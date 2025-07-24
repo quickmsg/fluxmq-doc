@@ -19,3 +19,92 @@
 
 ## 使用数据桥接转发
 您还可以添加使用数据桥接转发的操作。您只需从 **规则动作类型 **下拉列表中选择目标数据源桥接即可。以转发mysql为例：<br />![](@site/static/images/gzyq/rule/rule_5.png)
+
+## 2.1.0 版本新增功能
+
+### 内置函数增强
+FluxMQ 2.1.0 版本大幅增强了 SQL 函数库，新增了30多个内置函数，包括：
+
+**数据类型转换函数：**
+- `json()` - 将对象转换为 JSON 字符串
+- `str()` - 将字节数组转换为字符串
+- `int8()`, `int16()`, `int32()`, `int64()` - 数值类型转换
+- `toDouble()` - 转换为浮点数
+
+**时间处理函数：**
+- `date()` - 格式化日期 (yyyy-MM-dd)
+- `datetime()` - 格式化时间 (yyyy-MM-dd HH:mm:ss)
+- `dateToTimestamp()` - 日期字符串转时间戳
+- `datetimeToTimestamp()` - 时间字符串转时间戳
+
+**字符串处理函数：**
+- `split()` - 字符串分割
+- `find()` - 查找子字符串
+- `substring()` - 字符串截取
+- `last()` - 获取数组最后一个元素
+
+**加密和编码函数：**
+- `md5()`, `sha1()`, `sha256()`, `sha512()` - 各种哈希算法
+- `base64_encode()` - Base64 编码
+- `uuid()`, `uuidUpper()` - UUID 生成
+
+**使用示例：**
+```sql
+SELECT 
+  uuid() as message_id,
+  json(payload) as json_payload,
+  datetime(timestamp) as format_time,
+  md5(clientId) as client_hash
+FROM "$EVENT.PUBLISH" 
+WHERE topic =~ 'sensor/+/data'
+```
+
+### 新增数据源支持
+FluxMQ 2.1.0 新增了多个数据源支持：
+
+- **ClickHouse** - 适用于大数据分析场景
+- **Pulsar** - 高性能消息队列
+- **RocketMQ** - 阿里云消息队列
+- **TDengine** - 时序数据库
+
+### 离线消息功能
+新增离线消息处理能力，支持：
+- QoS 1/2 消息的离线存储
+- 客户端重连后自动投递
+- 支持 MySQL、Redis、PostgreSQL 等存储后端
+
+**离线消息动作配置示例：**
+```sql
+-- 离线消息存储到 MySQL
+INSERT INTO offline_messages (
+  id, clientId, topic, qos, payload, timestamp
+) VALUES (
+  '${id}', '${clientId}', '${topic}', 
+  ${qos}, '${json(payload)}', ${timestamp}
+)
+```
+
+### 高级 SQL 语法支持
+- 支持 `CASE WHEN` 条件表达式
+- 支持更复杂的 JSON 路径解析
+- 增强的字符串模式匹配
+- 支持 Java String API 方法调用
+
+**示例：**
+```sql
+SELECT 
+  clientId,
+  CASE 
+    WHEN payload.temperature > 40 THEN 'HIGH'
+    WHEN payload.temperature > 20 THEN 'NORMAL'
+    ELSE 'LOW'
+  END as temp_level,
+  topic.startsWith('sensor') as is_sensor
+FROM "$EVENT.PUBLISH"
+```
+
+## 下一步
+- 了解更多内置函数：[内置 SQL 函数](FUNCTION.md)
+- 查看实战案例：[规则引擎实战案例](EXAMPLES.md)
+- 高级用法指南：[规则引擎高级使用指南](ADVANCED.md)
+- 故障排查：[规则引擎故障排查与性能优化](TROUBLESHOOTING.md)
