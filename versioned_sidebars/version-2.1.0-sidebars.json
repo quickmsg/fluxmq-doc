@@ -7,6 +7,7 @@
         "type": "generated-index"
       },
       "items": [
+        "README",
         "product/introduction",
         "product/core"
       ]
@@ -142,10 +143,15 @@
             "type": "generated-index"
           },
           "items": [
+            "gzyq/rule/README",
             "gzyq/rule/INTRODUCE",
             "gzyq/rule/STARTED",
             "gzyq/rule/GRAMMAR",
-            "gzyq/rule/FUNCTION"
+            "gzyq/rule/FUNCTION",
+            "gzyq/rule/EXAMPLES",
+            "gzyq/rule/ADVANCED",
+            "gzyq/rule/TROUBLESHOOTING",
+            "gzyq/rule/BENCHMARK"
           ]
         },
         {
@@ -155,9 +161,15 @@
             "type": "generated-index"
           },
           "items": [
+            "gzyq/action/README",
             "gzyq/action/SAVE_KAFKA",
             "gzyq/action/SAVE_MYSQL",
+            "gzyq/action/SAVE_POSTGRESQL",
             "gzyq/action/SAVE_REDIS",
+            "gzyq/action/SAVE_CLICKHOUSE",
+            "gzyq/action/SAVE_TDENGINE",
+            "gzyq/action/SAVE_PULSAR",
+            "gzyq/action/SAVE_ROCKETMQ",
             {
               "type": "category",
               "label": "离线消息存储",
@@ -192,7 +204,8 @@
             "gzyq/source/MQTT",
             "gzyq/source/RABBITMQ",
             "gzyq/source/REDIS",
-            "gzyq/source/ROCKETMQ"
+            "gzyq/source/ROCKETMQ",
+            "gzyq/source/PULSAR"
           ]
         }
       ]
@@ -266,6 +279,7 @@
     "vs",
     "mqtt",
     "FAQ",
-    "License"
+    "License",
+    "CHANGELOG"
   ]
 }

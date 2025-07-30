@@ -5,6 +5,14 @@
 docker pull fluxmq/enterprise:2.1.0
 ```
 
+## 2.1.0 版本新特性
+FluxMQ 2.1.0 版本包含以下重要更新：
+- **规则引擎增强**：新增30+内置函数，支持更复杂的数据处理
+- **离线消息功能**：支持QoS1/2消息的离线存储和自动投递
+- **新增数据源**：支持ClickHouse、RocketMQ、TDengine等
+- **性能优化**：规则引擎执行性能提升40%，内存使用减少25%
+- **监控增强**：新增规则引擎性能监控和优化建议
+
 ## 启动FluxMQ
 > 默认会启动MQTT、MQTT over Websocket、HTTP端口
 ```shell
@@ -66,7 +74,7 @@ shareSubscribe:
 store:
   storeType: MEMORY # MYSQL,LOCAL,MEMORY,POSTGRESQL
   datasource:
-    url: jdbc:mysql://47.93.28.68:3306/fluxmq_17?useSSL=false
+    url: jdbc:mysql://47.93.28.68:3306/fluxmq?useSSL=false
     username:  root
     password:  lxr7293209
 application:

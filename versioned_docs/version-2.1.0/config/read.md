@@ -14,10 +14,11 @@ pool:
   bufferSize: 4096
   # eventThreadSize: 业务线程数默认CPU+2
   # eventMessageSize: 500000 # 业务线程队列大小
-  waitStrategy: BLOCKING # 线程等待策略 
   # ruleEngineAsync 规则引擎异步 默认开启
   # ruleEngineThreadSize 规则引擎线程数 默认CPU数
   # ruleEngineMessageSize 规则引擎线程队列大小
+  # ruleEngineMetrics 规则引擎性能监控 默认开启
+  # ruleEngineMetricsInterval 规则引擎性能监控间隔 默认60秒
   # lowWaterMark:  低水位： 默认32768 不建议配置
   # highWaterMark: 高水位: 默认65536 不建议配置
   # channelReadSize: 单连接读字节数/s ，默认不限制，不建议配置

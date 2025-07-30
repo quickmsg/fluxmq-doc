@@ -79,10 +79,16 @@
 - [Pulsar 数据源](../source/PULSAR.md)
 
 ### 动作类型
+- [动作类型总览](../action/README.md)
 - [MySQL 存储动作](../action/SAVE_MYSQL.md)
-- [Kafka 发送动作](../action/SAVE_KAFKA.md)
-- [离线消息动作](../action/OFFLINE.md)
+- [PostgreSQL 存储动作](../action/SAVE_POSTGRESQL.md)
+- [ClickHouse 存储动作](../action/SAVE_CLICKHOUSE.md)
+- [TDengine 存储动作](../action/SAVE_TDENGINE.md)
 - [Redis 存储动作](../action/SAVE_REDIS.md)
+- [Kafka 发送动作](../action/SAVE_KAFKA.md)
+- [Pulsar 发送动作](../action/SAVE_PULSAR.md)
+- [RocketMQ 发送动作](../action/SAVE_ROCKETMQ.md)
+- [离线消息动作](../action/OFFLINE.md)
 
 ## 💡 使用建议
 

@@ -25,3 +25,6 @@ FluxMQ支持的具体功能列表。
 | 管理页面-数据源管理 | 多数据源 | :heavy_check_mark: |
 | 管理页面-告警功能 | 支持钉钉、微信、飞书 | :heavy_check_mark: |
 | 管理页面-协议解析 | 支持脚本解析处理payload | :heavy_check_mark: |
+| 离线消息存储 | 支持QoS1/2消息离线存储和自动投递 | :heavy_check_mark: |
+| 规则引擎增强 | 新增30+内置函数，支持更多数据源 | :heavy_check_mark: |
+| 性能监控 | 规则引擎性能监控和优化 | :heavy_check_mark: |
