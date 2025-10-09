@@ -256,8 +256,16 @@
         "type": "generated-index"
       },
       "items": [
-        "api/README",
-        "api/reference",
+        {
+          "type": "doc",
+          "id": "api/README",
+          "label": "前言"
+        },
+        {
+          "type": "doc",
+          "id": "api/reference",
+          "label": "API接口"
+        },
         "api/Publish",
         "api/Check",
         "api/kick"
