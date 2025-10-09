@@ -118,7 +118,6 @@
       "items": [
         "endpoint/README",
         "endpoint/config",
-        "endpoint/api",
         "endpoint/metrics",
         "endpoint/troubleshooting"
       ]
@@ -257,6 +256,8 @@
         "type": "generated-index"
       },
       "items": [
+        "api/README",
+        "api/reference",
         "api/Publish",
         "api/Check",
         "api/kick"
