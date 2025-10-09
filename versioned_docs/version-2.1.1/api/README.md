@@ -13,40 +13,33 @@
 
 FluxMQ 提供了丰富的 HTTP API 接口，涵盖以下功能模块：
 
-### 核心功能
+### 核心文档
 
-- [端点管理 API](./endpoint.md) - 动态管理 MQTT 端点
-- [连接管理 API](./connection.md) - 管理 MQTT 客户端连接
+- [完整 API 参考](./reference.md) - 所有 API 接口的完整文档
 - [消息发布 API](./Publish.md) - 通过 HTTP 发布 MQTT 消息
-- [主题管理 API](./topic.md) - 管理 MQTT 主题
-- [订阅管理 API](./subscribe.md) - 管理 MQTT 订阅
+- [连接检查 API](./Check.md) - 检查客户端连接状态
+- [连接踢出 API](./kick.md) - 踢出指定客户端连接
 
-### 规则引擎
+### API 功能分类
 
-- [规则引擎 API](./rule.md) - 管理规则引擎规则
-- [数据源管理 API](./source.md) - 管理数据源配置
+完整的 API 接口按功能分为以下模块，详细信息请查看 [完整 API 参考](./reference.md)：
 
-### 安全管理
-
-- [认证管理 API](./auth.md) - 管理认证策略
-- [ACL 管理 API](./acl.md) - 管理访问控制列表
-
-### 系统管理
-
-- [系统管理 API](./system.md) - 系统配置和管理
-- [日志管理 API](./log.md) - 日志查询和管理
-- [监控 API](./monitor.md) - 系统监控和指标
-
-### 扩展功能
-
-- [脚本管理 API](./script.md) - 管理脚本
-- [指令管理 API](./command.md) - 管理指令配置
-- [扩展管理 API](./extension.md) - 管理扩展功能
-
-### 数据管理
-
-- [会话管理 API](./session.md) - 管理 MQTT 会话
-- [保留消息 API](./retain.md) - 管理保留消息
+- **端点管理 API** - 动态管理 MQTT 端点
+- **连接管理 API** - 管理 MQTT 客户端连接
+- **主题管理 API** - 管理 MQTT 主题
+- **订阅管理 API** - 管理 MQTT 订阅
+- **规则引擎 API** - 管理规则引擎规则
+- **数据源管理 API** - 管理数据源配置
+- **认证管理 API** - 管理认证策略
+- **ACL 管理 API** - 管理访问控制列表
+- **系统管理 API** - 系统配置和管理
+- **日志管理 API** - 日志查询和管理
+- **监控 API** - 系统监控和指标
+- **脚本管理 API** - 管理脚本
+- **指令管理 API** - 管理指令配置
+- **扩展管理 API** - 管理扩展功能
+- **会话管理 API** - 管理 MQTT 会话
+- **保留消息 API** - 管理保留消息
 
 ## 通用说明
 
@@ -186,7 +179,7 @@ def publish_message(topic, payload):
 
 ## 相关文档
 
-- [配置指南](../config/README.md)
-- [安装部署](../install/README.md)
 - [快速开始](../README.md)
+- [端点管理](../endpoint/README.md)
+- [规则引擎](../gzyq/rule/README.md)
 

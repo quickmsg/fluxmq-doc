@@ -311,6 +311,6 @@ POST /api/endpoints/import
 ## 相关文档
 
 - [端点配置详解](config.md)
-- [API 参考](api.md)
+- [API 参考](../api/reference.md)
 - [监控指标](metrics.md)
 - [故障排查](troubleshooting.md)
