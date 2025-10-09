@@ -1,4 +1,4 @@
-# FluxMQ API 参考
+# API 前言
 
 本文档详细介绍 FluxMQ 2.1.1 版本中所有 HTTP API 接口，按照功能模块进行分类。
 
