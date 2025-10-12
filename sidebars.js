@@ -19,9 +19,6 @@ const sidebars = {
     {
       type: 'category',
       label: '前言',
-      link: {
-        type: 'generated-index',
-      },
       items: [
         'product/introduction',
         'product/core'
