@@ -2,7 +2,7 @@
 slug: /
 ---
 
-# FluxMQ 2.1.1 文档
+# FluxMQ 文档
 
 欢迎使用 FluxMQ 2.1.1 版本！
 
