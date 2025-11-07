@@ -235,6 +235,54 @@ CREATE TABLE `SessionMessage` (
     INDEX `idx_time` (`f_time`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COMMENT='Session Messages';
 
+CREATE TABLE `metrics_data` (
+    `id` VARCHAR(64) NOT NULL PRIMARY KEY,
+    `application_id` VARCHAR(64) NOT NULL COMMENT 'Application ID',
+    `node_endpoint` VARCHAR(255) NOT NULL COMMENT 'Node endpoint',
+    `connections_current` BIGINT DEFAULT 0,
+    `subscriptions_current` BIGINT DEFAULT 0,
+    `messages_received_total` BIGINT DEFAULT 0,
+    `messages_sent_total` BIGINT DEFAULT 0,
+    `messages_published_total` BIGINT DEFAULT 0,
+    `connect_events` BIGINT DEFAULT 0,
+    `disconnect_events` BIGINT DEFAULT 0,
+    `subscribe_events` BIGINT DEFAULT 0,
+    `unsubscribe_events` BIGINT DEFAULT 0,
+    `jvm_memory_used` BIGINT DEFAULT 0,
+    `jvm_memory_max` BIGINT DEFAULT 0,
+    `jvm_memory_committed` BIGINT DEFAULT 0,
+    `jvm_heap_used` BIGINT DEFAULT 0,
+    `jvm_heap_max` BIGINT DEFAULT 0,
+    `jvm_heap_committed` BIGINT DEFAULT 0,
+    `jvm_nonheap_used` BIGINT DEFAULT 0,
+    `jvm_nonheap_max` BIGINT DEFAULT 0,
+    `jvm_nonheap_committed` BIGINT DEFAULT 0,
+    `jvm_metaspace_used` BIGINT DEFAULT 0,
+    `jvm_metaspace_max` BIGINT DEFAULT 0,
+    `jvm_metaspace_committed` BIGINT DEFAULT 0,
+    `jvm_codecache_used` BIGINT DEFAULT 0,
+    `jvm_codecache_max` BIGINT DEFAULT 0,
+    `jvm_codecache_committed` BIGINT DEFAULT 0,
+    `jvm_compressed_class_space_used` BIGINT DEFAULT 0,
+    `jvm_compressed_class_space_max` BIGINT DEFAULT 0,
+    `jvm_compressed_class_space_committed` BIGINT DEFAULT 0,
+    `jvm_gc_count` BIGINT DEFAULT 0,
+    `jvm_gc_time` BIGINT DEFAULT 0,
+    `jvm_threads_current` BIGINT DEFAULT 0,
+    `jvm_threads_daemon` BIGINT DEFAULT 0,
+    `jvm_threads_peak` BIGINT DEFAULT 0,
+    `jvm_threads_deadlocked` BIGINT DEFAULT 0,
+    `jvm_classes_loaded` BIGINT DEFAULT 0,
+    `jvm_classes_unloaded` BIGINT DEFAULT 0,
+    `process_cpu_usage` DOUBLE DEFAULT 0,
+    `system_cpu_usage` DOUBLE DEFAULT 0,
+    `uptime` BIGINT DEFAULT 0,
+    `collected_at` TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    INDEX `idx_metrics_app` (`application_id`),
+    INDEX `idx_metrics_collected` (`collected_at`),
+    INDEX `idx_metrics_app_node` (`application_id`, `node_endpoint`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COMMENT='Historical monitoring metrics';
+
 CREATE TABLE `ProtocolExtensionInfo` (
     `id` VARCHAR(64) NOT NULL PRIMARY KEY,
     `f_protocol_type` VARCHAR(50) NOT NULL COMMENT 'Protocol type',
@@ -480,6 +528,54 @@ CREATE TABLE "SessionMessage" (
 );
 CREATE INDEX "idx_sessionmsg_client" ON "SessionMessage"("f_client_id");
 CREATE INDEX "idx_sessionmsg_time" ON "SessionMessage"("f_time");
+
+CREATE TABLE "metrics_data" (
+    "id" VARCHAR(64) PRIMARY KEY,
+    "application_id" VARCHAR(64) NOT NULL,
+    "node_endpoint" VARCHAR(255) NOT NULL,
+    "connections_current" BIGINT DEFAULT 0,
+    "subscriptions_current" BIGINT DEFAULT 0,
+    "messages_received_total" BIGINT DEFAULT 0,
+    "messages_sent_total" BIGINT DEFAULT 0,
+    "messages_published_total" BIGINT DEFAULT 0,
+    "connect_events" BIGINT DEFAULT 0,
+    "disconnect_events" BIGINT DEFAULT 0,
+    "subscribe_events" BIGINT DEFAULT 0,
+    "unsubscribe_events" BIGINT DEFAULT 0,
+    "jvm_memory_used" BIGINT DEFAULT 0,
+    "jvm_memory_max" BIGINT DEFAULT 0,
+    "jvm_memory_committed" BIGINT DEFAULT 0,
+    "jvm_heap_used" BIGINT DEFAULT 0,
+    "jvm_heap_max" BIGINT DEFAULT 0,
+    "jvm_heap_committed" BIGINT DEFAULT 0,
+    "jvm_nonheap_used" BIGINT DEFAULT 0,
+    "jvm_nonheap_max" BIGINT DEFAULT 0,
+    "jvm_nonheap_committed" BIGINT DEFAULT 0,
+    "jvm_metaspace_used" BIGINT DEFAULT 0,
+    "jvm_metaspace_max" BIGINT DEFAULT 0,
+    "jvm_metaspace_committed" BIGINT DEFAULT 0,
+    "jvm_codecache_used" BIGINT DEFAULT 0,
+    "jvm_codecache_max" BIGINT DEFAULT 0,
+    "jvm_codecache_committed" BIGINT DEFAULT 0,
+    "jvm_compressed_class_space_used" BIGINT DEFAULT 0,
+    "jvm_compressed_class_space_max" BIGINT DEFAULT 0,
+    "jvm_compressed_class_space_committed" BIGINT DEFAULT 0,
+    "jvm_gc_count" BIGINT DEFAULT 0,
+    "jvm_gc_time" BIGINT DEFAULT 0,
+    "jvm_threads_current" BIGINT DEFAULT 0,
+    "jvm_threads_daemon" BIGINT DEFAULT 0,
+    "jvm_threads_peak" BIGINT DEFAULT 0,
+    "jvm_threads_deadlocked" BIGINT DEFAULT 0,
+    "jvm_classes_loaded" BIGINT DEFAULT 0,
+    "jvm_classes_unloaded" BIGINT DEFAULT 0,
+    "process_cpu_usage" DOUBLE PRECISION DEFAULT 0,
+    "system_cpu_usage" DOUBLE PRECISION DEFAULT 0,
+    "uptime" BIGINT DEFAULT 0,
+    "collected_at" TIMESTAMP WITH TIME ZONE DEFAULT CURRENT_TIMESTAMP
+);
+CREATE INDEX IF NOT EXISTS idx_metrics_app ON "metrics_data"("application_id");
+CREATE INDEX IF NOT EXISTS idx_metrics_collected ON "metrics_data"("collected_at");
+CREATE INDEX IF NOT EXISTS idx_metrics_app_node ON "metrics_data"("application_id", "node_endpoint");
 
 CREATE TABLE "ProtocolExtensionInfo" (
     "id" VARCHAR(64) NOT NULL PRIMARY KEY,
