@@ -128,7 +128,7 @@ kind: Secret
 metadata:
   name: fluxmq-license
 data:
-  license.base64: 5q2k5aSE5pS+572uYmFzZTY057yW56CB5ZCO55qEbGljZW5zZeOAgg== #   license.base64: 5q2k5aSE5pS+572uYmFzZTY057yW56CB5ZCO55qEbGljZW5zZeOAgg== # 使用授权证书license.base64中的内容进行base64编码，然后替换掉5q2k.....Agg==
+  license.base64: 5q2k5aSE5pS+572uYmFzZTY057yW56CB5ZCO55qEbGljZW5zZeOAgg== #   fluxmq.lic: 5q2k5aSE5pS+572uYmFzZTY057yW56CB5ZCO55qEbGljZW5zZeOAgg== # 使用授权证书license.base64中的内容进行base64编码，然后替换掉5q2k.....Agg==
 ```
 ## Deployment资源创建
 如果购买了授权证书，且添加了上述的secret，需要将此文件末尾的证书挂载描述注释取消。
@@ -171,8 +171,8 @@ spec:
           readOnly: true  
         # 证书挂载点，如有购买证书，且添加了授权证书secret，可取消下面的注释
         # - name: license
-          # mountPath: /app/license.base64
-          # subPath: license.base64
+          # mountPath: /app/fluxmq.lic
+          # subPath: fluxmq.lic
       volumes:
       - name: config
         configMap:

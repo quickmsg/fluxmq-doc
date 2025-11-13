@@ -171,8 +171,8 @@ spec:
           readOnly: true  
         # 证书挂载点，如有购买证书，且添加了授权证书secret，可取消下面的注释
         # - name: license
-          # mountPath: /app/license.base64
-          # subPath: license.base64
+          # mountPath: /app/fluxmq.lic
+          # subPath: fluxmq.lic
       volumes:
       - name: config
         configMap:
