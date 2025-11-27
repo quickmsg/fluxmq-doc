@@ -90,6 +90,7 @@ CREATE TABLE `AuthConfig` (
     `f_redis` TEXT COMMENT 'Redis authentication config (JSON)',
     `f_encrypt` VARCHAR(50) DEFAULT NULL COMMENT 'Encryption method',
     `f_enable` TINYINT(1) DEFAULT 0 COMMENT 'Enable status',
+    `f_filter` TEXT COMMENT 'Filter expression',
     `f_name` VARCHAR(255) NOT NULL COMMENT 'Configuration name',
     `f_create_time` VARCHAR(50) DEFAULT NULL COMMENT 'Create time'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COMMENT='Authentication Configuration';
@@ -335,6 +336,7 @@ CREATE TABLE "AuthConfig" (
     "f_redis" TEXT DEFAULT NULL,
     "f_encrypt" VARCHAR(50) DEFAULT NULL,
     "f_enable" BOOLEAN DEFAULT FALSE,
+    "f_filter" TEXT DEFAULT NULL,
     "f_name" VARCHAR(255) NOT NULL,
     "f_create_time" VARCHAR(50) DEFAULT NULL
 );
