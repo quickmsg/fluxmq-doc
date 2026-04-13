@@ -28,3 +28,32 @@
   --ifm-color-primary-lightest: #4fddbf;
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
 }
+
+/* Demo video blocks: tinted frame so the player area is not a flat gray before the first frame loads */
+.demo-video-wrap {
+  border-radius: var(--ifm-global-radius);
+  overflow: hidden;
+  margin: 1rem 0 1.25rem;
+  border: 1px solid var(--ifm-color-emphasis-200);
+  background: linear-gradient(
+    155deg,
+    rgba(46, 133, 85, 0.14) 0%,
+    var(--ifm-background-color) 55%,
+    rgba(46, 133, 85, 0.05) 100%
+  );
+}
+
+[data-theme='dark'] .demo-video-wrap {
+  background: linear-gradient(
+    155deg,
+    rgba(37, 194, 160, 0.16) 0%,
+    var(--ifm-background-color) 55%,
+    rgba(37, 194, 160, 0.06) 100%
+  );
+}
+
+.demo-video-wrap video {
+  display: block;
+  width: 100%;
+  background: transparent;
+}
